@@ -24,11 +24,6 @@ class SecFragment : Fragment() {
     private val vm: SecondFragmentViewModel by viewModels<SecondFragmentViewModel>()
 
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -53,6 +48,8 @@ class SecFragment : Fragment() {
 //        secondFragmentButton.setOnClickListener {
 //
 //        }
+
+        //TODO СДЕЛАЙ ПОНЯТНОЕ НАЗВАНИЕ МЕТОДУ GET
         val result = vm.get()
         binding.weightTextView.text = result.weight
         binding.heightTextView.text = result.height
@@ -77,12 +74,5 @@ class SecFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding=null
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            SecFragment().apply {
-            }
     }
 }

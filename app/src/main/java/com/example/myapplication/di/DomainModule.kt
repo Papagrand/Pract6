@@ -28,7 +28,7 @@ class DomainModule {
     }
 
     @Provides
-    fun provideFruitUseCase(repository: FruitItemRepositoryRetrofitImpl, database: DataBase): FruitUseCase {
+    fun provideFruitUseCase(repository: FruitItemRepository, database: DataBase): FruitUseCase {
         return FruitUseCase(repository = repository, database = database)
     }
 }

@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.R
 import com.example.myapplication.model.FruitListItem
 
+//TODO чекнуть ListAdapter https://swiftbook.ru/post/tutorials/speed-up-your-android-recyclerview-using-diffutil/
 class FoodFragmentAdapter: RecyclerView.Adapter<FoodFragmentAdapter.FoodViewHolder>() {
 
     var listFood = emptyList<FruitListItem>()

@@ -19,9 +19,8 @@ class FoodFragmentViewModel @Inject constructor(private val useCase: FruitUseCas
 
     fun getFruitInfo() {
         viewModelScope.launch(Dispatchers.IO) {
-            val fruitsList = useCase.getFruitInfoFromApi()
-            useCase.saveFruitsToDatabase(fruitsList)
-            _fruitsList.postValue(fruitsList) // Уведомить LiveData о изменении данных
+            _fruitsList.postValue(useCase.getFruitInfoFromApi())
+            useCase.saveFruitsToDatabase(_fruitsList.value ?: listOf())
         }
     }
 

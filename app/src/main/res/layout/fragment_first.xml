@@ -88,12 +88,12 @@
             android:gravity="center"
             android:layout_height="wrap_content">
 
+            <!-- Серый цвет означает что кнопка заблокирована -->
             <Button
                 android:id="@+id/save_values_button"
                 android:text="Сохранить"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:backgroundTint="@color/gray"/>
+                android:layout_height="wrap_content" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -123,7 +123,4 @@
             android:layout_height="wrap_content"
             />
     </LinearLayout>
-
-
-
 </LinearLayout>

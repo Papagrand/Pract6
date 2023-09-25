@@ -12,21 +12,4 @@ import com.example.myapplication.model.FruitListItem
 @TypeConverters(NutritionsConverter::class)
 abstract class DataBase : RoomDatabase() {
     abstract fun fruitListItemDao(): FruitDao
-
-    companion object {
-        private var INSTANCE: DataBase? = null
-
-        fun getInstance(context: Context): DataBase {
-            if (INSTANCE == null) {
-                synchronized(DataBase::class) {
-                    INSTANCE = Room.databaseBuilder(
-                        context.applicationContext,
-                        DataBase::class.java,
-                        "app_database"
-                    ).build()
-                }
-            }
-            return INSTANCE!!
-        }
-    }
 }

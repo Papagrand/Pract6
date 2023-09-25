@@ -12,20 +12,13 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 
 @HiltViewModel
-class SecondFragmentViewModel @Inject constructor(private val getParamsUseCase: GetParamsUseCase, private val saveParamsUseCase: SaveParamsUseCase): ViewModel() {
+class SecondFragmentViewModel @Inject constructor(
+    private val getParamsUseCase: GetParamsUseCase,
+    private val saveParamsUseCase: SaveParamsUseCase
+) : ViewModel() {
 
-    init {
-        Log.e("AAA", "VM created")
-    }
-
-    override fun onCleared() {
-        Log.e("AAA", "VM cleared")
-        super.onCleared()
-
-    }
-
+    //TODO переименовать
     fun get(): UserParams {
-
         val result: UserParams = getParamsUseCase.execute()
         return result
     }

@@ -6,6 +6,8 @@ import com.example.myapplication.data.repository.FruitItemRepositoryRetrofitImpl
 import com.example.myapplication.model.FruitListItem
 import javax.inject.Inject
 
+//TODO Прочесть разницу между Use Case и Interactors
+
 class FruitUseCase @Inject constructor(private val repository: FruitItemRepository, private val database: DataBase) {
 
     suspend fun getFruitInfoFromApi(): List<FruitListItem> {

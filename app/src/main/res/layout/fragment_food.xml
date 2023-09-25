@@ -6,6 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".view.fragment.FoodFragment">
 
+    <!-- Втф, огромная вложенность -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -25,6 +26,7 @@
                 android:id="@+id/rv_food"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                tools:listitem="@layout/item_fruit"
                 />
         </LinearLayout>
 
@@ -38,14 +40,15 @@
             app:layout_constraintRight_toRightOf="parent"
             android:orientation="vertical">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:text="Загрузить"
                 android:id="@+id/getDataButton"
                 android:layout_marginBottom="40dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"/>
+                android:layout_gravity="center" />
 
+            <!-- Layout можно выносить -->
             <LinearLayout
                 android:id="@+id/navigate_buttons"
                 android:layout_width="match_parent"
@@ -77,7 +80,6 @@
                     android:layout_height="wrap_content"
                     />
             </LinearLayout>
-
         </LinearLayout>
     </LinearLayout>
 
