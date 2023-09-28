@@ -9,25 +9,27 @@ import android.view.ViewGroup
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.Controller
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentFoodBinding
 import com.example.myapplication.view.FoodFragmentAdapter
 import com.example.myapplication.view.viewModel.FoodFragmentViewModel
 //import com.example.myapplication.view.viewModelFactory.FoodFragmentViewModelFactory
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 @AndroidEntryPoint
 class FoodFragment : Fragment() {
     //TODO СДЕЛАТЬ НОРМАЛЬНЫЙ BOTTOM NAVIGATION VIEW
-    lateinit var controller: Controller
+    //lateinit var controller: Controller
 
-    //TODO ПОМЕНЯЙ БИНДИНГ КАК СДЕЛАНО В FirstFragment
+    //TODO ПОМЕНЯТЬ БИНДИНГ КАК СДЕЛАНО В FirstFragment
     private var _binding: FragmentFoodBinding? = null
     private val binding get() = _binding!!
 
-    //TODO ПРОЧТИ ПРО ListAdapter и про DiffUtil
+    //TODO ПРОЧЕСТЬ ПРО ListAdapter и про DiffUtil
     private lateinit var foodAdapter: FoodFragmentAdapter
 
     private val viewModel: FoodFragmentViewModel by viewModels()
@@ -42,7 +44,7 @@ class FoodFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        controller = context as Controller
+        //controller = context as Controller
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -74,8 +76,7 @@ class FoodFragment : Fragment() {
     }
 
     private fun updateAdapter() {
-        //TODO УБИРАЙ НАХУЙ
-        runBlocking {
+        CoroutineScope(Dispatchers.Main).launch {
             val fruitsList = viewModel.getAllFruitsFromDatabase()
             foodAdapter.setData(fruitsList)
         }

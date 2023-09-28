@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class MainActivity : AppCompatActivity(), Controller {
+class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity(), Controller {
 //            .commit()
     }
 
-    override fun navigate(view: View) {
+//    override fun navigate(view: View) {
 //        when(view.id){
 //            R.id.firstFragmentButton ->supportFragmentManager
 //                .beginTransaction()
@@ -29,6 +29,6 @@ class MainActivity : AppCompatActivity(), Controller {
 //                .addToBackStack(null)
 //                .commit()
 //        }
-    }
+   // }
 
 }

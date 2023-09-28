@@ -7,18 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.Controller
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentSecBinding
-import com.example.myapplication.view.viewModel.FirstFragmentViewModel
 import com.example.myapplication.view.viewModel.SecondFragmentViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class SecFragment : Fragment() {
-    lateinit var controller: Controller
     private var _binding: FragmentSecBinding? = null
     private val binding get() = _binding!!
     private val vm: SecondFragmentViewModel by viewModels<SecondFragmentViewModel>()
@@ -35,7 +31,6 @@ class SecFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        controller=context as Controller
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -49,7 +44,7 @@ class SecFragment : Fragment() {
 //
 //        }
 
-        //TODO СДЕЛАЙ ПОНЯТНОЕ НАЗВАНИЕ МЕТОДУ GET
+        //TODO ПОМЕНЯТЬ НАЗВАНИЕ МЕТОДУ GET
         val result = vm.get()
         binding.weightTextView.text = result.weight
         binding.heightTextView.text = result.height

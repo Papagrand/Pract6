@@ -10,7 +10,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.example.myapplication.Controller
 import com.example.myapplication.R
 import com.example.myapplication.databinding.FragmentFirstBinding
 import com.example.myapplication.view.viewModel.FirstFragmentViewModel
@@ -20,7 +19,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class FirstFragment : Fragment() {
 
     //TODO СДЕЛАТЬ НОРМАЛЬНЫЙ BOTTOM NAVIGATION VIEW
-    private lateinit var controller: Controller
+    //private lateinit var controller: Controller
 
     private val vm: FirstFragmentViewModel by viewModels()
 
@@ -38,7 +37,7 @@ class FirstFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        controller = context as Controller
+        //controller = context as Controller
     }
 
 
