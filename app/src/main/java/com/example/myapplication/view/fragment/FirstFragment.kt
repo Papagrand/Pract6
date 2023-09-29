@@ -62,15 +62,6 @@ class FirstFragment : Fragment() {
             vm.save(textWeight, textHeight, textAge)
 
         }
-        binding.firstFragmentButton.setOnClickListener {
-
-        }
-        binding.secondFragmentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_firstFragment_to_secFragment)
-        }
-        binding.foodFragmentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_firstFragment_to_foodFragment)
-        }
 
     }
 }

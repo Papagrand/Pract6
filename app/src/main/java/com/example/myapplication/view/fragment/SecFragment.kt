@@ -52,16 +52,6 @@ class SecFragment : Fragment() {
 
 
 
-        binding.firstFragmentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_secFragment_to_firstFragment)
-        }
-        binding.foodFragmentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_secFragment_to_foodFragment)
-        }
-        binding.secondFragmentButton.setOnClickListener {
-
-
-        }
 
 
     }

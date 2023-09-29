@@ -11,6 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="18sp"
+        android:textColor="@color/black"
         android:textStyle="bold"
         android:layout_gravity="left"/>
 
@@ -23,6 +24,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Калории: "
+            android:textColor="@color/black"
             android:textSize="16sp" />
 
         <TextView
@@ -41,6 +43,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Белки: "
+            android:textColor="@color/teal_700"
             android:textSize="16sp" />
 
         <TextView
@@ -53,12 +56,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="г,  "
+            android:textColor="@color/teal_700"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Жиры: "
+            android:textColor="@color/teal_700"
             android:textSize="16sp" />
 
         <TextView
@@ -71,12 +76,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="г,  "
+            android:textColor="@color/teal_700"
             android:textSize="16sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Углеводы: "
+            android:textColor="@color/teal_700"
             android:textSize="16sp" />
 
         <TextView
@@ -89,6 +96,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="г  "
+            android:textColor="@color/teal_700"
             android:textSize="16sp" />
     </LinearLayout>
 </LinearLayout>

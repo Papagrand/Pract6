@@ -60,14 +60,6 @@ class FoodFragment : Fragment() {
             viewModel.getFruitInfo()
         }
 
-        binding.firstFragmentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_foodFragment_to_firstFragment)
-        }
-        binding.secondFragmentButton.setOnClickListener {
-            findNavController().navigate(R.id.action_foodFragment_to_secFragment)
-        }
-        binding.foodFragmentButton.setOnClickListener {
-        }
     }
 
     override fun onResume() {
